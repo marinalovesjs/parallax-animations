@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Paroller.js & Parallax.js — демо анимаций</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery для Paroller.js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Paroller.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-paroller@1.4.7/dist/jquery.paroller.min.js"></script>
+
+  <!-- Parallax.js -->
+  <script src="https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js"></script>
+</head>
+<body>
+
+  <!-- HERO-блок с Parallax.js -->
+  <header class="hero">
+    <div id="scene">
+      <div class="layer layer-back" data-depth="0.1"></div>
+      <div class="layer layer-mountain" data-depth="0.25"></div>
+      <div class="layer layer-city" data-depth="0.4"></div>
+      <div class="layer layer-text" data-depth="0.7">
+        <h1>Parallax Анимации</h1>
+        <p>Движение мыши создаёт глубину. Прокрутка — оживляет фон.</p>
+        <button class="scroll-btn" id="scrollDown">Перейти вниз ⬇️</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Блок с Paroller.js: фон-баннер -->
+  <section
+    class="section section-dark paroller"
+    data-paroller-factor="0.3"
+    data-paroller-type="background"
+    data-paroller-direction="vertical"
+  >
+    <div class="content">
+      <h2>Paroller.js — параллакс при скролле</h2>
+      <p>
+        Этот блок использует Paroller.js. Фон двигается медленнее, чем страница,
+        создавая эффект глубины при прокрутке.
+      </p>
+    </div>
+  </section>
+
+  <!-- Блок с Paroller.js: "плавающие" элементы -->
+  <section class="section section-light">
+    <div
+      class="floating-box paroller"
+      data-paroller-factor="-0.2"
+      data-paroller-type="foreground"
+      data-paroller-direction="vertical"
+    >
+      Я двигаюсь навстречу при скролле ⬆️⬇️
+    </div>
+
+    <div class="content">
+      <h2>Foreground-эффект</h2>
+      <p>
+        Здесь Paroller.js двигает уже не фон, а сам элемент.
+        Чем сильнее крутишь, тем заметнее смещение.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Демо собрано Мариной. Paroller.js + Parallax.js 💫</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

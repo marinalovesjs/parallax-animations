@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #020817;
+  color: #e5e7eb;
+}
+
+/* HERO с Parallax.js */
+
+.hero {
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(circle at top, #111827, #020817);
+}
+
+#scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Слои */
+
+.layer {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.layer-back {
+  background-image: linear-gradient(to bottom, #0f172a, #020817);
+  opacity: 0.8;
+}
+.layer-mountain {
+  background-image: url("https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&w=1200");
+  opacity: 0.25;
+  z-index: 2;
+}
+
+.layer-city {
+  background-image: url("https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&w=1200");
+  opacity: 0.5;
+  z-index: 3;
+}
+
+
+
+.layer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #e5e7eb;
+  z-index: 5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+.layer-text h1 {
+  font-size: 40px;
+  margin: 0 0 8px;
+}
+
+.layer-text p {
+  margin: 0;
+  color: #9ca3af;
+}
+
+/* Секции с Paroller.js */
+
+.section {
+  padding: 80px 24px;
+}
+
+.section-dark {
+  background-image: url("https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?auto=compress&w=1600");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 8, 23, 0.7);
+}
+
+.section-dark .content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-light {
+  background: #020817;
+  position: relative;
+}
+
+.section .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.section p {
+  margin: 0;
+  color: #9ca3af;
+}
+
+/* Плавающий блок (foreground parallax) */
+
+.floating-box {
+  position: absolute;
+  right: 10%;
+  top: 20px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #111827;
+  border: 1px solid #2563eb;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+  font-size: 14px;
+}
+
+/* Футер */
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  border-top: 1px solid #111827;
+}
